@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Store</title>
+</head>
+
+<body onload="initCart()">
+  <nav>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+    </ul>
+  </nav>
+
+  <div class="store">
+    <h1 id="storeHeader">Store</h1>
+
+    <a id="cart" href="#">Cart</a>
+    <aside class="storeSidebar">
+      <ul>
+          <li><a href="#tshirts">T-Shirts</a></li>
+          <li><a href="#hoodies">Hoodies</a></li>
+          <li><a href="#hats">Hats</a></li>
+          <li><a href="#accessories">Accessories</a></li>
+      </ul>
+    </aside>
+    <main class="storeContainer">
+      <h2 id="tshirts">T-Shirts</h2>
+      <ul>
+        <li data-name="T-Shirt 1" data-price="28.00">
+          <img src="images/shirt.png" height="270px"> 
+            <form action="#" method="" onsubmit="return addToCart(this)">
+              <div class="cost">28,00€</div>
+              <select class="size" name="size" required>
+                <option selected hidden value="">-</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+              <input type="submit" class="addToCart" value="Add to Cart">
+            </form>
+        </li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+      </ul>
+      <h2 id="hoodies">Hoodies</h2>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+      <h2 id="hats">Hats</h2>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+      <h2 id="accessories">Accessories</h2>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </main>
+  </div>
+
+  <footer>footer</footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

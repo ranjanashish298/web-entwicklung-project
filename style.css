@@ -1,0 +1,167 @@
+body {
+	margin: 0;
+}
+
+nav {
+	background: rgb(29, 36, 47);
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+	background: rgb(29, 36, 47);
+}
+
+/*------------------------Store-------------------------*/
+
+.storeSidebar {
+	background: rgb(29, 36, 47);
+  border-radius: 4px;
+}
+
+.storeSidebar > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin-left: -40px;
+}
+
+.storeSidebar > ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.store {
+  margin: 2em;
+	min-height: 100vh;
+}
+
+.storeContainer {
+  color: white;
+}
+
+.storeContainer > h2 {
+  background: rgb(29, 36, 47);
+  border-radius: 4px;
+  padding: 1em;
+  margin: 0;
+}
+
+.storeContainer > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(224, 224, 230);
+  border-radius: 4px;
+  grid-gap: 1.5em;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.store {
+  display: grid;
+  grid-template-rows: minmax(1em, auto) auto 1fr auto minmax(1em, auto);
+}
+
+.storeContainer > ul li {
+  background: white;
+  border: thin solid gray;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  height: 300px;
+  width: 270px;
+  margin-left: -40px;
+}
+
+#cart {
+  width: 40px;
+  height: 40px;
+  font-size: xx-large;
+  text-decoration: none;
+}
+
+.cost {
+  color: rgb(75, 75, 75);
+  float: left;
+  margin-left: 15px;
+  font-size: large;
+  margin-top: 5px;
+}
+
+.size {
+  width: 20%;
+  margin-left: 70px;
+  font-size: 18px;
+  color: gray;
+  background: white;
+  border: thin solid darkgray;
+  height: 30px;
+  float: left;
+}
+
+.addToCart {
+  color: rgb(75, 75, 75);
+  background: white;
+  border: thin solid darkgray;
+  height: 30px;
+  float: left;
+}
+
+.addToCart:hover {
+  background: rgb(224, 224, 230);
+}
+
+@media screen and (min-width: 600px) {
+  footer, nav {
+		grid-column: span 8;
+	}
+  
+  .storeContainer > ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .storeContainer > ul li {
+    margin: 0;
+    margin-left: 25px;
+  }
+
+	.store {
+		display: grid;
+		grid-template-columns: 1fr 10em repeat(5, minmax(auto, 15em)) 1fr;
+		grid-template-rows: minmax(1em, auto) auto 1fr auto minmax(1em, auto);
+	}
+
+  #storeHeader {
+    grid-column: 2/2;
+  }
+
+  .storeSidebar > ul {
+    margin-top: 40px;
+    display: block;
+    margin-left: 0;
+  }
+
+  #cart {
+    grid-column: 8/8;
+    padding-top: 0.8em;
+  }
+  
+	.storeContainer {
+    margin-left: 2em;
+		grid-column: 3/8;
+	}
+
+	.storeSidebar {
+		grid-column: 2/2;
+	}
+}
+/*------------------------------------------------------*/
