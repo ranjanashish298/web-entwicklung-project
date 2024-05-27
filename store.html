@@ -20,7 +20,7 @@
   <div class="store">
     <h1 id="storeHeader">Store</h1>
 
-    <a id="cart" href="#">Cart</a>
+    <a id="cart" href="cart.html"></a>
     <aside class="storeSidebar">
       <ul>
           <li><a href="#tshirts">T-Shirts</a></li>
@@ -30,11 +30,11 @@
       </ul>
     </aside>
     <main class="storeContainer">
-      <h2 id="tshirts">T-Shirts</h2>
+      <button id="tshirts" onClick="collapse(this)">T-Shirts</button>
       <ul>
         <li data-name="T-Shirt 1" data-price="28.00">
           <img src="images/shirt.png" height="270px"> 
-            <form action="#" method="" onsubmit="return addToCart(this)">
+            <form class="item" action="#" method="post" onsubmit="return addToCart(this)">
               <div class="cost">28,00€</div>
               <select class="size" name="size" required>
                 <option selected hidden value="">-</option>
@@ -51,18 +51,18 @@
         <li>Item 4</li>
         <li>Item 5</li>
       </ul>
-      <h2 id="hoodies">Hoodies</h2>
+      <button id="hoodies" onClick="collapse(this)">Hoodies</button>
       <ul>
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
       </ul>
-      <h2 id="hats">Hats</h2>
+      <button id="hats" onClick="collapse(this)">Hats</button>
       <ul>
         <li>Item 1</li>
         <li>Item 2</li>
       </ul>
-      <h2 id="accessories">Accessories</h2>
+      <button id="accessories" onClick="collapse(this)">Accessories</button>
       <ul>
         <li>Item 1</li>
         <li>Item 2</li>

@@ -1,3 +1,7 @@
+html {
+  overflow-y: scroll; /*stop scrollbar from repositioning page*/
+}
+
 body {
 	margin: 0;
 }
@@ -16,10 +20,12 @@ nav > ul {
 
 footer {
 	background: rgb(29, 36, 47);
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
 
 /*------------------------Store-------------------------*/
-
 .storeSidebar {
 	background: rgb(29, 36, 47);
   border-radius: 4px;
@@ -39,24 +45,27 @@ footer {
 
 .store {
   margin: 2em;
-	min-height: 100vh;
 }
 
-.storeContainer {
-  color: white;
-}
-
-.storeContainer > h2 {
+.storeContainer > button {
   background: rgb(29, 36, 47);
   border-radius: 4px;
+  border: none;
   padding: 1em;
   margin: 0;
+  color: white;
+  width: 100%;
+  text-align: left;
+  font-size: x-large;
+}
+
+.storeContainer > button:hover {
+  background: rgb(4, 12, 23);
 }
 
 .storeContainer > ul {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: center;
   background-color: rgb(224, 224, 230);
   border-radius: 4px;
@@ -82,10 +91,11 @@ footer {
 }
 
 #cart {
-  width: 40px;
   height: 40px;
-  font-size: xx-large;
+  font-size: x-large;
   text-decoration: none;
+  margin-top: 10px;
+  color: black;
 }
 
 .cost {
@@ -119,11 +129,11 @@ footer {
   background: rgb(224, 224, 230);
 }
 
+.addToCart:active {
+  background: rgb(204, 204, 210);
+}
+
 @media screen and (min-width: 600px) {
-  footer, nav {
-		grid-column: span 8;
-	}
-  
   .storeContainer > ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -163,5 +173,76 @@ footer {
 	.storeSidebar {
 		grid-column: 2/2;
 	}
+}
+/*------------------------------------------------------*/
+
+/*-------------------------Cart-------------------------*/
+.cart {
+  display: grid;
+  grid-template-rows: minmax(1em, auto) auto 1fr auto minmax(1em, auto);
+  margin: 2em;
+}
+
+.cartContainer {
+  background: rgb(224, 224, 230);
+  border-radius: 4px;
+}
+
+#cartHeader {
+  background: rgb(29, 36, 47);
+  color: white;
+  padding: 20px;
+  margin-bottom: 0;
+  border-radius: 4px;
+}
+
+.cartContainer > ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 20px auto auto 20px;
+}
+
+.cartContainer > ul button {
+  width: 88px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  grid-column: 3/3;
+  background: white;
+  border: thin solid darkgray;
+  float: left;
+  border-radius: 4px;
+}
+
+.cartContainer > ul button:hover {
+  background: rgb(244, 244, 250);
+}
+
+.cartContainer > ul li {
+  grid-column: 2/2;
+  font-size: large;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: white;
+  padding: 6px;
+  border-radius: 4px;
+  border: thin solid darkgray;
+  max-width: 150px;
+}
+
+@media screen and (min-width: 600px) {
+
+	.cart {
+		display: grid;
+		grid-template-columns: 1fr 10em repeat(5, minmax(auto, 15em)) 1fr;
+		grid-template-rows: minmax(1em, auto) auto 1fr auto minmax(1em, auto);
+	}
+
+  #cartHeader {
+    grid-column: 4/6;
+  }
+
+  .cartContainer {
+    grid-column: 4/6;
+  }
 }
 /*------------------------------------------------------*/
