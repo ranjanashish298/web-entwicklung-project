@@ -71,7 +71,7 @@ function loadCart() {
             li.innerText = currentElem.price + "€ " + currentElem.name + " " + currentElem.size;
             
             var button = document.createElement("button");
-            button.innerHTML = "Remove Item";
+            button.innerHTML = "x";
             button.setAttribute('onclick', 'removeItem('+ index +')');
 
             list.appendChild(li);
@@ -81,9 +81,11 @@ function loadCart() {
             
             index++;
         }
-        var total = document.createElement("li");
-        total.innerHTML = "Total: " + totalCost.toFixed(2) + "€";
-        list.appendChild(total);
+        if (index > 0) {
+            var total = document.createElement("li");
+            total.innerHTML = "Total: " + totalCost.toFixed(2) + "€";
+            list.appendChild(total);
+        }
     } 
 }
 
