@@ -199,11 +199,10 @@ footer {
 .cartContainer > ul {
   list-style: none;
   display: grid;
-  grid-template-columns: 20px auto auto 20px;
 }
 
 .cartContainer > ul button {
-  width: 88px;
+  width: 35px;
   margin-top: 5px;
   margin-bottom: 5px;
   grid-column: 3/3;
@@ -214,7 +213,11 @@ footer {
 }
 
 .cartContainer > ul button:hover {
-  background: rgb(244, 244, 250);
+  background: rgb(224, 224, 230);
+}
+
+.cartContainer > ul button:hover {
+  background: rgb(204, 204, 210);
 }
 
 .cartContainer > ul li {
@@ -223,10 +226,29 @@ footer {
   margin-top: 5px;
   margin-bottom: 5px;
   background: white;
-  padding: 6px;
+  padding: 7px;
   border-radius: 4px;
   border: thin solid darkgray;
-  max-width: 150px;
+}
+
+#checkout {
+  grid-column: 3/3;
+  color: rgb(75, 75, 75);
+  background: white;
+  border: thin solid darkgray;
+  height: 30px;
+  font-size: large;
+  border-radius: 4px;
+  float: inline-end;
+  margin: 10px;
+}
+
+#checkout:hover {
+  background: rgb(224, 224, 230);
+}
+
+#checkout:active {
+  background: rgb(204, 204, 210);
 }
 
 @media screen and (min-width: 600px) {
