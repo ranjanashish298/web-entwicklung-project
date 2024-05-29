@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock and Roll Band</title>
+    <title>Rock and Roll Band Home Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -34,6 +34,55 @@
       </div>
     </nav>
     
+    <div class="main-content">
+        <section class="album-promo">
+            <img src="/Users/ashishranjan/Desktop/main/WE-project/web-entwicklung-project/images/Screenshot 2024-05-29 at 14.06.01.png" alt="Latest Album Cover">
+            <div class="newsletter-signup">
+                <h2>Sign up for our newsletter!</h2>
+                <form action="signup-url" method="post">
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="band-image">
+            <img src="/Users/ashishranjan/Desktop/main/WE-project/web-entwicklung-project/images/Screenshot 2024-05-29 at 14.14.21.png" alt="U2 Band Image">
+            <audio controls>
+                <source src="songs/WithorWithoutYou.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section class="band-intro">
+            <h2>Meet the Band</h2>
+            <p>Introduction to band members here...</p>
+            <h3>Fun Facts</h3>
+            <ul>
+                <li>Fun fact about Member 1</li>
+                <li>Fun fact about Member 2</li>
+                <li>Fun fact about Member 3</li>
+            </ul>
+        </section>
+
+        <section class="concert-dates">
+            <h2>Upcoming Concerts</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                </tr>
+                <tr>
+                    <td>2024-09-01</td>
+                    <td>World Tour</td>
+                    <td>New York, NY</td>
+                </tr>
+                <!-- Additional rows as needed -->
+            </table>
+        </section>
+    </div>
+
 
     <footer>
         <p>© 2024 U2 Rock Band. All rights reserved.</p>
