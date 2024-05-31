@@ -1,14 +1,72 @@
-
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 body {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  text-align: center;
   font: 400 15px/1.8 Lato, sans-serif;
   color: #777;
 }
+
+body > * {
+  padding: 20px;
+  flex: 100%;
+}
+/* 
+div {
+  background-color: purple;
+} */
+.container-page {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: purple;
+  margin-top: 10px;
+  background-color: yellow;
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 92vh; /* Full viewport height */
+  overflow: hidden;
+}
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.audio-controls {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Provides a semi-transparent background for visibility */
+  padding: 5px 0; /* Adds padding to audio controls */
+}
+audio {
+  width: 100%; /* Ensures audio controls span the width of the video */
+  height: 15px; /* Ensures audio bar is visually appealing */
+}
+#band-image  {
+  background-color: black;
+  background-size: cover;
+}
+#audio {
+}
+@media only screen and (max-width: 1920px) {
+  img {
+    width: 100%;
+  }
+}
+
+
+
+
 footer {
   margin-top: auto;
 }
@@ -22,12 +80,13 @@ h3, h4 {
   padding: 80px 120px;
 }
 
-
-@media (max-width: 600px) {
-  .carousel-caption {
-    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-  }
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
 }
+
+
+
 
 .navbar {
   font-family: Montserrat, sans-serif;

@@ -12,88 +12,139 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="index.html">U2</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="gallery.html">GALLERY</a></li>
-            <li><a href="store.html">STORE</a></li>
-            <li><a href="connect.html">CONNECT</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     
-    <div class="main-content">
-        <section class="album-promo">
-            <img src="/Users/ashishranjan/Desktop/main/WE-project/web-entwicklung-project/images/Screenshot 2024-05-29 at 14.06.01.png" alt="Latest Album Cover">
-            <div class="newsletter-signup">
-                <h2>Sign up for our newsletter!</h2>
-                <form action="signup-url" method="post">
-                    <input type="email" name="email" placeholder="Your email" required>
-                    <button type="submit">Sign Up</button>
-                </form>
+    <!-- Navigation Bar and other html pages link -->
+    <section>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="index.html">U2</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="gallery.html">GALLERY</a></li>
+                  <li><a href="store.html">STORE</a></li>
+                  <li><a href="connect.html">CONNECT</a></li>
+                </ul>
+              </div>
             </div>
-        </section>
+          </nav>
+    </section>
+    
 
-        <section class="band-image">
-            <img src="/Users/ashishranjan/Desktop/main/WE-project/web-entwicklung-project/images/Screenshot 2024-05-29 at 14.14.21.png" alt="U2 Band Image">
-            <audio controls>
-                <source src="songs/WithorWithoutYou.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </section>
+   <!-- Section for Album Promo with Signup -->
+        <!-- <section class = "container-page">
 
-        <section class="band-intro">
-            <h2>Meet the Band</h2>
-            <p>Introduction to band members here...</p>
-            <h3>Fun Facts</h3>
+      
+                <img src="images/Screenshot 2024-05-29 at 14.14.21.png" alt="U2 Band Image">
+         
+
+            <div id = "audio">
+                <audio controls>
+                    <source src="songs/WithorWithoutYou.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>   
+        </section> -->
+      
+        <div class="video-wrapper">
+          <video autoplay muted loop id="background-video">
+              <source src="video/12525522-uhd_3840_2160_60fps.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
+      
+      <div class="audio-controls">
+          <audio controls autoplay>
+              <source src="songs/WithorWithoutYou.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>
+      </div>
+        
+
+    <!-- This is about band members and some fun facts over them -->
+    <section class="band-intro">
+            <div>
+                <h2>Meet the Band</h2>
+                <p>Introduction to band members here...</p>
+                <h3>Fun Facts</h3>
+                <ul>
+                    <li>Fun fact about Member 1</li>
+                    <li>Fun fact about Member 2</li>
+                    <li>Fun fact about Member 3</li>
+                </ul>
+            </div> 
+            <!-- <div class="container-fluid">
+
+                <div class="row feature_padding">
+          
+                  <div class="col-lg-4  fix ">
+                    <i class="fa-solid fa-circle-check fa-4x icon"></i>
+                    <h3 class="features-title">Member 1.</h3>
+                    <p class="text">Fun fact 1. </p>
+          
+                  </div>
+                  <div class="col-lg-4  fix">
+                    <i class="fa-solid fa-bullseye fa-4x icon"></i>
+                    <h3 class="features-title">Member 2</h3>
+                    <p class="text">Fun fact 2.</p>
+                  </div>
+                  <div class="col-lg-4  fix ">
+                    <i class="fa-solid fa-heart fa-4x icon"></i>
+                    <h3 class="features-title">Member 3</h3>
+                    <p class="text">Fun fact 3..</p>
+                  </div>
+                  <div class="col-lg-4  fix ">
+                    <i class="fa-solid fa-heart fa-4x icon"></i>
+                    <h3 class="features-title">Member 4</h3>
+                    <p class="text">Fun fact 4.</p>
+                  </div>
+          
+                </div>
+          
+              </div> -->
+    </section>
+
+        <!-- Concert Dates and Locations -->
+    <section class="concert-dates">
+            <div>
+                <h2>Upcoming Concerts</h2>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td>2024-09-01</td>
+                        <td>World Tour</td>
+                        <td>New York, NY</td>
+                    </tr>
+                </table>
+            </div>
+           
+    </section>
+    
+
+    
+    <!-- Footer -->
+    <section>
+        <footer>
+            <p>© 2024 U2 Rock Band. All rights reserved.</p>
+            <p>Follow us on Social Media:</p>
             <ul>
-                <li>Fun fact about Member 1</li>
-                <li>Fun fact about Member 2</li>
-                <li>Fun fact about Member 3</li>
+                <li><a href="https://twitter.com/u2">Twitter</a></li>
+                <li><a href="https://youtube.com/u2">YouTube</a></li>
             </ul>
-        </section>
-
-        <section class="concert-dates">
-            <h2>Upcoming Concerts</h2>
-            <table>
-                <tr>
-                    <th>Date</th>
-                    <th>Event</th>
-                    <th>Location</th>
-                </tr>
-                <tr>
-                    <td>2024-09-01</td>
-                    <td>World Tour</td>
-                    <td>New York, NY</td>
-                </tr>
-                <!-- Additional rows as needed -->
-            </table>
-        </section>
-    </div>
-
-
-    <footer>
-        <p>© 2024 U2 Rock Band. All rights reserved.</p>
-        <p>Follow us on Social Media:</p>
-        <ul>
-            <li><a href="https://twitter.com/u2">Twitter</a></li>
-            <li><a href="https://youtube.com/u2">YouTube</a></li>
-        </ul>
-    </footer>
-    
-    
+        </footer>
+    </section>
+  
 </body>
 </html>
     
