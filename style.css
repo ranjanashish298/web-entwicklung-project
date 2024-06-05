@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevents horizontal scrolling */
+  box-sizing: border-box;
 }
 body {
   display: flex;
@@ -16,17 +17,7 @@ body > * {
   padding: 20px;
   flex: 100%;
 }
-/* 
-div {
-  background-color: purple;
-} */
-.container-page {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: purple;
-  margin-top: 10px;
-  background-color: yellow;
-}
+
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -52,20 +43,71 @@ audio {
   width: 100%; /* Ensures audio controls span the width of the video */
   height: 15px; /* Ensures audio bar is visually appealing */
 }
-#band-image  {
-  background-color: black;
-  background-size: cover;
+
+
+/* ************ Band members section styling ********/
+
+/* Base styles */
+*, *:before, *:after {
+  box-sizing: border-box;
 }
-#audio {
+
+.column {
+  width:25%; /* Start with four columns in larger screens */
+  margin-bottom: 16px;
+  padding: 0 8px;
 }
-@media only screen and (max-width: 1920px) {
-  img {
-    width: 100%;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .column {
+      flex-basis: 100%; /* Full width on smaller screens */
+      padding: 0 15px; /* Increase padding for smaller screens */
   }
 }
 
 
 
+
+
+
+
+
+/* This is for the Table section  */
+
+table, td, th {
+  border: 1px solid grey;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+th {
+  text-align: center;
+}
 
 footer {
   margin-top: auto;
@@ -76,18 +118,12 @@ h3, h4 {
   font-size: 20px;
   color: #111;
 }
-.container {
-  padding: 80px 120px;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-}
 
 
 
 
+
+/*------ This is the Navbar section----*/
 .navbar {
   font-family: Montserrat, sans-serif;
   margin-bottom: 0;
