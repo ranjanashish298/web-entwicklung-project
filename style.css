@@ -9,8 +9,6 @@ html, body {
 /*------------------------Store-------------------------*/
 
 #storeBody, #cartBody {
-  display: flex;
-  flex-flow: row wrap;
   text-align: center;
   font: 400 15px/1.8 Lato, sans-serif;
   color: #777;
@@ -18,7 +16,6 @@ html, body {
 
 #storeBody > *, #cartBody > * {
   padding: 20px;
-  flex: 100%;
 }
 
 #storeHeader {
