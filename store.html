@@ -3,75 +3,215 @@
 
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <title>Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock and Roll Band Store</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="initCart()">
-  <nav>
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-    </ul>
-  </nav>
+<body id="storeBody" onload="initCart()">
 
+  <div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="index.html">U2</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="store.html">STORE</a></li>
+            <li><a href="connect.html">CONNECT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  
   <div class="store">
-    <h1 id="storeHeader">Store</h1>
-
+    <h1 id="storeHeader">Rock and Roll Band | Store</h1>
+    
     <a id="cart" href="cart.html"></a>
     <aside class="storeSidebar">
       <ul>
-          <li><a href="#tshirts">T-Shirts</a></li>
-          <li><a href="#hoodies">Hoodies</a></li>
-          <li><a href="#hats">Hats</a></li>
-          <li><a href="#accessories">Accessories</a></li>
+        <li><a href="#tshirts">T-Shirts</a></li>
+        <li><a href="#hoodies">Hoodies</a></li>
+        <li><a href="#caps">Caps</a></li>
+        <li><a href="#accessories">Accessories</a></li>
       </ul>
     </aside>
     <main class="storeContainer">
-      <button id="tshirts" onClick="collapse(this)">T-Shirts</button>
-      <ul>
+      <button class="collapsibleButton" id="tshirts" onclick="collapse(this)">T-Shirts</button>
+      <ul class="storeCollapsible" style="max-height: 100%"> <!--collapsible content visible by default-->
         <li data-name="T-Shirt 1" data-price="28.00">
-          <img src="images/shirt.png" height="270px"> 
-            <form class="item" action="#" method="post" onsubmit="return addToCart(this)">
-              <div class="cost">28,00€</div>
-              <select class="size" name="size" required>
-                <option selected hidden value="">-</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-              </select>
-              <input type="submit" class="addToCart" value="Add to Cart">
-            </form>
+          <img class="productImg" src="images/store/shirt.png" alt="black shirt with band logo">
+          <form class="storeForm" action="#" method="post" onsubmit="return addToCart(this)">
+            <div class="cost">28,00€</div>
+            <select class="size" name="size" required>
+              <option selected hidden value="">-</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <input type="submit" class="addToCart" value="Add to Cart">
+          </form>
         </li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
+        <li data-name="T-Shirt 2" data-price="28.00">
+          <img class="productImg" src="images/store/shirt.png" alt="black shirt with band logo">
+          <form class="storeForm" action="#" method="post" onsubmit="return addToCart(this)">
+            <div class="cost">28,00€</div>
+            <select class="size" name="size" required>
+              <option selected hidden value="">-</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <input type="submit" class="addToCart" value="Add to Cart">
+          </form>
+        </li>
+        <li data-name="T-Shirt 3" data-price="28.00">
+          <img class="productImg" src="images/store/shirt.png" alt="black shirt with band logo">
+          <form class="storeForm" action="#" method="post" onsubmit="return addToCart(this)">
+            <div class="cost">28,00€</div>
+            <select class="size" name="size" required>
+              <option selected hidden value="">-</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <input type="submit" class="addToCart" value="Add to Cart">
+          </form>
+        </li>
+        <li data-name="T-Shirt 4" data-price="28.00">
+          <img class="productImg" src="images/store/shirt.png" alt="black shirt with band logo">
+          <form class="storeForm" action="#" method="post" onsubmit="return addToCart(this)">
+            <div class="cost">28,00€</div>
+            <select class="size" name="size" required>
+              <option selected hidden value="">-</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <input type="submit" class="addToCart" value="Add to Cart">
+          </form>
+        </li>
+        <li data-name="T-Shirt 5" data-price="28.00">
+          <img class="productImg" src="images/store/shirt.png" alt="black shirt with band logo">
+          <form class="storeForm" action="#" method="post" onsubmit="return addToCart(this)">
+            <div class="cost">28,00€</div>
+            <select class="size" name="size" required>
+              <option selected hidden value="">-</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <input type="submit" class="addToCart" value="Add to Cart">
+          </form>
+        </li>
       </ul>
-      <button id="hoodies" onClick="collapse(this)">Hoodies</button>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+      <button class="collapsibleButton" id="hoodies" onclick="collapse(this)">Hoodies</button>
+      <ul class="storeCollapsible" style="max-height: 100%"> <!--collapsible content visible by default-->
+        <li data-name="Hoodie 1" data-price="38.00">
+          <img class="productImg" src="images/store/hoodie.png" alt="black hoodie with band logo">
+          <form class="storeForm" action="#" method="post" onsubmit="return addToCart(this)">
+            <div class="cost">38,00€</div>
+            <select class="size" name="size" required>
+              <option selected hidden value="">-</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <input type="submit" class="addToCart" value="Add to Cart">
+          </form>
+        </li>
+        <li data-name="Hoodie 2" data-price="38.00">
+          <img class="productImg" src="images/store/hoodie.png" alt="black hoodie with band logo">
+          <form class="storeForm" action="#" method="post" onsubmit="return addToCart(this)">
+            <div class="cost">38,00€</div>
+            <select class="size" name="size" required>
+              <option selected hidden value="">-</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <input type="submit" class="addToCart" value="Add to Cart">
+          </form>
+        </li>
+        <li data-name="Hoodie 3" data-price="38.00">
+          <img class="productImg" src="images/store/hoodie.png" alt="black hoodie with band logo">
+          <form class="storeForm" action="#" method="post" onsubmit="return addToCart(this)">
+            <div class="cost">38,00€</div>
+            <select class="size" name="size" required>
+              <option selected hidden value="">-</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <input type="submit" class="addToCart" value="Add to Cart">
+          </form>
+        </li>
       </ul>
-      <button id="hats" onClick="collapse(this)">Hats</button>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
+      <button class="collapsibleButton" id="caps" onclick="collapse(this)">Caps</button>
+      <ul class="storeCollapsible" style="max-height: 100%"> <!--collapsible content visible by default-->
+        <li data-name="Cap 1" data-price="18.00">
+          <img class="productImg" src="images/store/cap.png" alt="black cap with band logo">
+          <form class="storeForm" action="#" method="post" onsubmit="return addToCart(this)">
+            <div class="cost">18,00€</div>
+            <select class="size" name="size" required>
+              <option selected hidden value="">-</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+            </select>
+            <input type="submit" class="addToCart" value="Add to Cart">
+          </form>
+        </li>
+        <li data-name="Cap 1" data-price="18.00">
+          <img class="productImg" src="images/store/cap.png" alt="black cap with band logo">
+          <form class="storeForm" action="#" method="post" onsubmit="return addToCart(this)">
+            <div class="cost">18,00€</div>
+            <select class="size" name="size" required>
+              <option selected hidden value="">-</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+            </select>
+            <input type="submit" class="addToCart" value="Add to Cart">
+          </form>
+        </li>
       </ul>
-      <button id="accessories" onClick="collapse(this)">Accessories</button>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+      <button class="collapsibleButton" id="accessories" onclick="collapse(this)">Accessories</button>
+      <ul class="storeCollapsible" style="max-height: 100%"> <!--collapsible content visible by default-->
+        <li class="comingSoonNotice">Coming Soon!</li>
+        <li class="comingSoonNotice">Coming Soon!</li>
+        <li class="comingSoonNotice">Coming Soon!</li>
       </ul>
     </main>
   </div>
 
-  <footer>footer</footer>
+  <div>
+    <footer>
+      <p>© 2024 U2 Rock Band. All rights reserved.</p>
+      <p>Follow us on Social Media:</p>
+      <p><a href="https://twitter.com/u2">Twitter</a></p>
+      <p><a href="https://youtube.com/u2">YouTube</a></p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>

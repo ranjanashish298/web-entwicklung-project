@@ -26,17 +26,18 @@ function addToCart(e) {
     updateTotal();
 }
 
-function collapse(e) {
+function collapse(e) { //https://www.w3schools.com/howto/howto_js_collapsible.asp
     var content = e.nextElementSibling;
-    if (content.style.display != "none") {
-        content.style.display = "none";
+    e.classList.toggle("active");
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
     } else {
-        content.style.display = "grid";
+        content.style.maxHeight = content.scrollHeight + "px";
     }
 }
 
 function updateTotal() {
-    if (localStorage && localStorage.getItem('cart')) {
+    if (localStorage && localStorage.getItem('cart')) { //if localStorage available and cart initialized
         var cart = JSON.parse(localStorage.getItem('cart'));
 
         var index = 0;
@@ -46,12 +47,14 @@ function updateTotal() {
             index++;
         }
     }
-    document.getElementById("cart").innerHTML = "(" + totalCost.toFixed(2) + "€) Cart";
+    document.getElementById("cart").innerHTML = "(" + totalCost.toFixed(2) + "€) 🛒";
 }
 
-document.querySelector('form[class=item]').addEventListener('submit', function (event) {
-    event.preventDefault(); //stop submit button from reloading page
-});
+if (document.querySelector('form[class=storeForm]')) {
+    this.addEventListener('submit', function (event) {
+        event.preventDefault(); //stop submit button from reloading page and resetting selection
+    });
+}
 /*------------------------------------------------------*/
 
 /*--------------------------Cart------------------------*/
@@ -81,10 +84,21 @@ function loadCart() {
             
             index++;
         }
-        if (index > 0) {
-            var total = document.createElement("li");
+        if (index > 0) { //if cart not empty
+            var total = document.createElement("li"); //add total
             total.innerHTML = "Total: " + totalCost.toFixed(2) + "€";
             list.appendChild(total);
+
+            var checkout = document.createElement("button"); //add checkout button
+            checkout.innerHTML = "Proceed to Checkout";
+            checkout.setAttribute('id','checkout');
+            list.parentElement.append(checkout);
+        } else {
+            var empty = document.createElement("div"); //else add 'EMPTY' notice
+            empty.innerHTML = "EMPTY";
+            empty.setAttribute('id','emptyCart');
+            list.parentElement.append(empty);
+            list.parentElement.style.height = "200px";
         }
     } 
 }

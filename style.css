@@ -1,45 +1,181 @@
-html {
-  overflow-y: scroll; /*stop scrollbar from repositioning page*/
-}
-
-body {
-	margin: 0;
-}
-
-nav {
-	background: rgb(29, 36, 47);
-}
-
-nav > ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  box-sizing: border-box;
 }
 
-footer {
-	background: rgb(29, 36, 47);
-  position: fixed;
-  bottom: 0px;
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 92vh; /* Full viewport height */
+  overflow: hidden;
+}
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.audio-controls {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Provides a semi-transparent background for visibility */
+  padding: 5px 0; /* Adds padding to audio controls */
+}
+audio {
+  width: 100%; /* Ensures audio controls span the width of the video */
+  height: 15px; /* Ensures audio bar is visually appealing */
+}
+
+/* ************ Band members section styling ********/
+#h2 {
+  font-size: 2.5em; /* Makes the font size much larger */
+  font-weight: bold; /* Increases the weight of the font for emphasis */
+    text-transform: uppercase; /* OPTIONAL: makes all letters uppercase */
+    color: black; /* Sets a dark color for contrast, adjust as necessary */
+    text-align: center; 
+}
+
+/* Base styles */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.column {
+  width:25%; /* Start with four columns in larger screens */
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .column {
+      flex-basis: 100%; /* Full width on smaller screens */
+      padding: 0 15px; /* Increase padding for smaller screens */
+  }
+}
+
+/*img {
+  width: 200px;
+  height: 300px;
+}*/
+
+
+/* This is for the Table section  */
+
+table, td, th {
+  border: 1px solid grey;
+}
+
+table {
+  border-collapse: collapse;
   width: 100%;
 }
 
+td {
+  text-align: center;
+}
+th {
+  text-align: center;
+}
+
+footer {
+  margin-top: auto;
+}
+
+h3, h4 {
+  margin: 10px 0 30px 0;
+  letter-spacing: 10px;      
+  font-size: 20px;
+  color: #111;
+}
+
+/*------ This is the Navbar section----*/
+.navbar {
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 4px;
+  opacity: 0.9;
+}
+.navbar li a, .navbar .navbar-brand { 
+  color: #d5d5d5 !important;
+}
+.navbar-nav li a:hover {
+  color: #fff !important;
+}
+.navbar-nav li.active a {
+  color: #fff !important;
+  background-color: #29292c !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+
 /*------------------------Store-------------------------*/
+
+#storeBody, #cartBody {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  font: 400 15px/1.8 Lato, sans-serif;
+  color: #777;
+}
+
+#storeBody > *, #cartBody > * {
+  padding: 20px;
+  flex: 100%;
+}
+
+#storeHeader {
+  padding-bottom: 30px;
+  color: black;
+}
+
 .storeSidebar {
-	background: rgb(29, 36, 47);
-  border-radius: 4px;
+	background: rgb(66, 66, 69);
+  font-family: Montserrat, sans-serif;
 }
 
 .storeSidebar > ul {
   display: flex;
   list-style: none;
+  text-align: start;
   justify-content: space-around;
-  margin-left: -40px;
+  padding-left: 0;
 }
 
 .storeSidebar > ul li a {
   text-decoration: none;
+  color: #dfdfdf;
+}
+
+.storeSidebar > ul li a:hover {
   color: white;
 }
 
@@ -48,8 +184,8 @@ footer {
 }
 
 .storeContainer > button {
-  background: rgb(29, 36, 47);
-  border-radius: 4px;
+  background: rgb(66, 66, 69);
+  font-family: Montserrat, sans-serif;
   border: none;
   padding: 1em;
   margin: 0;
@@ -60,19 +196,22 @@ footer {
 }
 
 .storeContainer > button:hover {
-  background: rgb(4, 12, 23);
+  background: rgb(42, 42, 47);
 }
 
 .storeContainer > ul {
   list-style: none;
   display: grid;
   justify-content: center;
-  background-color: rgb(224, 224, 230);
-  border-radius: 4px;
+  background: rgb(226, 226, 229);
   grid-gap: 1.5em;
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+}
+
+.storeCollapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 .store {
@@ -83,19 +222,20 @@ footer {
 .storeContainer > ul li {
   background: white;
   border: thin solid gray;
-  padding-bottom: 10px;
-  border-radius: 4px;
-  height: 300px;
+  height: 314px;
   width: 270px;
-  margin-left: -40px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #cart {
   height: 40px;
-  font-size: x-large;
+  font-size: 22px;
   text-decoration: none;
   margin-top: 10px;
-  color: black;
+  color: rgb(46, 46, 49);
+  text-align: end;
 }
 
 .cost {
@@ -103,18 +243,17 @@ footer {
   float: left;
   margin-left: 15px;
   font-size: large;
-  margin-top: 5px;
 }
 
 .size {
   width: 20%;
-  margin-left: 70px;
+  margin-left: 50px;
   font-size: 18px;
   color: gray;
   background: white;
   border: thin solid darkgray;
   height: 30px;
-  float: left;
+  margin-right: -15px;
 }
 
 .addToCart {
@@ -122,26 +261,56 @@ footer {
   background: white;
   border: thin solid darkgray;
   height: 30px;
-  float: left;
+  float: right;
+  margin-right: 5px;
 }
 
 .addToCart:hover {
-  background: rgb(224, 224, 230);
+  background: rgb(244, 244, 250);
 }
 
 .addToCart:active {
-  background: rgb(204, 204, 210);
+  background: rgb(224, 224, 230);
 }
 
-@media screen and (min-width: 600px) {
+.collapsibleButton:after { /*add plus/minus to button for collapsible*/
+  content: "−";
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  float: right;
+  margin-right: 13px;
+}
+  
+.collapsibleButton.active:after {
+  content: "+";
+}
+
+.productImg {
+  height: 270px;
+}
+
+.comingSoonNotice {
+  line-height: 300px;
+}
+
+@media screen and (min-width: 767px) {
   .storeContainer > ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
   .storeContainer > ul li {
-    margin: 0;
-    margin-left: 25px;
+    margin-left: 15px;
+  }
+
+  .storeSidebar > ul {
+    text-align: center;
+    padding: 0;
+  }
+
+  .storeSidebar > ul li {
+    padding: 4px;
   }
 
 	.store {
@@ -151,7 +320,8 @@ footer {
 	}
 
   #storeHeader {
-    grid-column: 2/2;
+    grid-column: 2/6;
+    text-align: start;
   }
 
   .storeSidebar > ul {
@@ -161,7 +331,7 @@ footer {
   }
 
   #cart {
-    grid-column: 8/8;
+    grid-column: 7/7;
     padding-top: 0.8em;
   }
   
@@ -184,16 +354,16 @@ footer {
 }
 
 .cartContainer {
-  background: rgb(224, 224, 230);
-  border-radius: 4px;
+  background: rgb(226, 226, 229);
 }
 
 #cartHeader {
-  background: rgb(29, 36, 47);
+  background: rgb(66, 66, 69);
   color: white;
   padding: 20px;
   margin-bottom: 0;
-  border-radius: 4px;
+  font-family: Montserrat, sans-serif;
+  text-align: start;
 }
 
 .cartContainer > ul {
@@ -203,32 +373,30 @@ footer {
 
 .cartContainer > ul button {
   width: 35px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
   grid-column: 3/3;
   background: white;
   border: thin solid darkgray;
   float: left;
-  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cartContainer > ul button:hover {
+  background: rgb(244, 244, 250);
 }
 
 .cartContainer > ul button:hover {
   background: rgb(224, 224, 230);
 }
 
-.cartContainer > ul button:hover {
-  background: rgb(204, 204, 210);
-}
-
 .cartContainer > ul li {
   grid-column: 2/2;
   font-size: large;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
   background: white;
   padding: 7px;
-  border-radius: 4px;
   border: thin solid darkgray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #checkout {
@@ -236,35 +404,53 @@ footer {
   color: rgb(75, 75, 75);
   background: white;
   border: thin solid darkgray;
-  height: 30px;
+  height: 38px;
   font-size: large;
-  border-radius: 4px;
   float: inline-end;
   margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #checkout:hover {
-  background: rgb(224, 224, 230);
+  background: rgb(244, 244, 250);
 }
 
 #checkout:active {
-  background: rgb(204, 204, 210);
+  background: rgb(224, 224, 230);
 }
 
-@media screen and (min-width: 600px) {
+#emptyCart {
+  line-height: 170px;
+  padding: 0;
+}
+
+#backToStore {
+  width: 130px;
+  font-size: 22px;
+  text-decoration: none;
+  margin-top: 10px;
+  color: rgb(46, 46, 49);
+  text-align: start;
+}
+
+@media screen and (min-width: 767px) {
 
 	.cart {
 		display: grid;
-		grid-template-columns: 1fr 10em repeat(5, minmax(auto, 15em)) 1fr;
+		grid-template-columns: 1fr minmax(auto, 30em) 1fr;
 		grid-template-rows: minmax(1em, auto) auto 1fr auto minmax(1em, auto);
 	}
 
   #cartHeader {
-    grid-column: 4/6;
+    grid-column: 2/2;
   }
 
   .cartContainer {
-    grid-column: 4/6;
+    grid-column: 2/2;
+  }
+
+  #backToStore {
+    grid-column: 2/2;
   }
 }
 /*------------------------------------------------------*/
