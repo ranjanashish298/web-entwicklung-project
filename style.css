@@ -1,3 +1,37 @@
+/* Common ****/
+
+/* <!-- Footer --> */
+.footer-container {
+  background-color: #222; /* Dark background for the footer for contrast */
+  color: #fff; /* Light text color for readability */
+  text-align: center; /* Center-align the text */
+  padding: 20px 0; /* Padding for spacing inside the footer */
+  font-family: 'Lato', sans-serif; /* Consistent font style */
+}
+
+footer {
+  margin: auto;
+  width: 80%; /* Limit the width of the footer content */
+  padding: 20px 0; /* Padding around the content */
+}
+
+footer p {
+  margin: 10px 0; /* Spacing between paragraphs */
+  font-size: 16px; /* Slightly larger font size for better readability */
+}
+
+footer a {
+  color: #9f9f9f; /* Light grey color for links, making them distinct but not too bright */
+  text-decoration: none; /* No underline to keep it clean */
+  font-weight: bold; /* Makes the links slightly bolder */
+}
+
+footer a:hover, footer a:focus {
+  color: #00aeef; /* Change color on hover and focus to give feedback */
+  text-decoration: underline; /* Underline on hover to indicate interactivity */
+  cursor: pointer; /* Cursor changes to pointer to indicate a link */
+}
+
 
 /****** Navigation and Links ******/
 .nav-container {
@@ -109,21 +143,90 @@ th {
   text-align: center;
 }
 
-/* <!-- Footer --> */
-.footer-container {
-  margin-top: 100px;
-  text-align: center;
+
+
+
+
+/******* Gallery.html *****/
+.media-container-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-template-rows: auto 1fr; /* First row for text, second row for carousel */
+  gap: 20px; /* Adds space between grid items */
+  padding: 20px; /* Padding around the entire grid */
+  max-width: 1300px; /* Maximum width of the grid */
+  margin: auto; /* Center the grid horizontally */
 }
 
+.itemM {
+  font-size: 1.2rem; /* Larger text for the introduction */
+  text-align: center; /* Center-align the text */
+  padding: 10px; /* Padding for better spacing */
+}
+#carouselExample {
+  width: 100%; /* Ensures the carousel takes the full width of the grid column */
+  grid-row: 2; /* Places the carousel in the second row of the grid */
+}
 
+.carousel-item img {
+  width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures images cover the area without stretching */
+}
+#carouselExample .carousel-inner {
+  border-radius: 10px; /* Rounded corners for the carousel */
+  overflow: hidden; /* Ensures the images fit within the corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Subtle shadow around the carousel */
+}
 
+.ytvideo-container-grid {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Creates as many columns as can fit, min 300px wide */
+  gap: 20px; /* Space between videos */
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
 
+iframe {
+  width: 100%;
+  height: auto; /* Adjust based on the aspect ratio */
+  aspect-ratio: 16 / 9; /* Modern CSS property to control video aspect ratio */
+}
+iframe {
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out; /* Smooth transform effect */
+}
 
+iframe:hover {
+  transform: scale(1.10); /* Slightly enlarge on hover */
+}
 
+.intro-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
 
+.intro-text p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
 
-
-
+/* General styling for all intro texts to add spacing and alignment */
+.intro-text {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background to make it stand out */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
 
 /* connect.html */
 
@@ -321,6 +424,16 @@ th {
 
 
 @media (max-width: 620px) {
+
+  /* Common **/
+  .footer-container {
+    text-align: center; /* Center text on small screens */
+    padding: 20px 10px; /* Adjust padding */
+  }
+  footer {
+    width: 100%; /* Full width on smaller screens */
+  }
+
   /* Navigation */
   .nav-container  {
     flex-direction: column;
@@ -371,6 +484,31 @@ th {
     height:50%;
   }
   
+  /******* Gallery.html *****/
+
+  .ytvideo-container-grid {
+    grid-template-columns: 400px; /* Only 1 column on smaller screens */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* connect.html */
 
@@ -414,5 +552,22 @@ th {
 }
 
 
+/* Responsiveness for Ipad, bigger than mobile *****/
+
+
+
+
+
+
+
+/* Media.html ****/
+@media (min-width: 601px) and (max-width: 900px) {
+  .ytvideo-container-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns in mid-size screens */
+  }
+}
 
 }
+
+
+
