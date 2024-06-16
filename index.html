@@ -20,7 +20,7 @@
         <div class="itemNavigation gallery"> <a href="gallery.html">GALLERY</a></div>
         <div class="itemNavigation store"> <a href="store.html">STORE</a></div>
         <div class="itemNavigation connect"> <a href="connect.html">CONNECT</a></div>
-        <div class="itemNavigation connect"> <a href="connect.html">EX1</a></div>
+        <div class="itemNavigation connect"> <a href="play.html">PLAY</a></div>
     </div>
     
 
@@ -36,75 +36,59 @@
         </video>
       </div>
       <div class="itemVideo">
-          <audio controls autoplay="true" id="background-audio">
+          <audio id="background-audio">
               <source src="songs/WithorWithoutYou.mp3" type="audio/mpeg">
               Your browser does not support the audio element.
           </audio>
+          <img src="images/play.png" id="playbtn" onclick="playSong()">
+          <img src="images/pause.png" id="pausebtn" onclick="pauseSong()" style="display: none;">
       </div>
     </div>
 
 
+    <!-- Band Introduction -->
 
-
-
-
-
-      
-      
-    
-        
-
-    <section class="band-intro">
-        <div>
+    <div class="band-container">
+        <div class="band-intro">
             <h2 id="h2">Meet the Band</h2>
             <p>Meet the legendary members of U2, each bringing their unique flair and unstoppable energy to the world of rock music.</p>    
         </div> 
-        <div class="row">
-          <div class="column">
-            <div class="card">
-              <img src="images/bono.jpg" alt="Bono" style="width:100%">
-              <div class="container">
-                <h2>Bono</h2>
-                <p class="title">Vocals</p>
-                <p class="text">Aside from his captivating voice, Bono can speak fluent Spanish and loves to write poetry in his downtime.</p>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <img src="images/secondBand.jpg" alt="Edge" style="width:100%">
-              <div class="container">
-                <h2>The Edge</h2>
-                <p class="title">Guitar</p>
-                <p class="text">Known for his iconic sound, The Edge also has a quirky hobby of collecting rare vintage hats from around the globe.</p>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <img src="images/thirdBand.jpg" alt="Adam" style="width:100%">
-              <div class="container">
-                <h2>Adam Clayton </h2>
-                <p class="title">Bass Guitar</p>
-                <p class="text">Adam is not only a bassist but also an avid gardener, specializing in growing exotic orchids.</p>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="card">
-              <img src="images/fourthBand.jpg" alt="Larry" style="width:100%">
-              <div class="container">
-                <h2>Larry Mullen Jr.</h2>
-                <p class="title">Drums</p>
-                <p class="text">Larry, the backbone of U2's rhythm, is a certified yoga instructor and practices daily before performances.</p>
-              </div>
-            </div>
-          </div>
+
+        <div class="band-member">
+          <img class="band-image" src="images/bono.jpg" alt="Bono">
+          <h2>Bono</h2>
+          <p>Vocals</p>   
+          <p class="fun-fact">Aside from his captivating voice, Bono can speak fluent Spanish and loves to write poetry in his downtime.</p>      
         </div>
-    </section>
+
+        <div class="band-member">
+          <img class="band-image" src="images/secondBand.jpg" alt="Edge">
+          <h2>The Edge</h2>
+          <p>Guitar</p>   
+          <p class="fun-fact">Known for his iconic sound, The Edge also has a quirky hobby of collecting rare vintage hats from around the globe.</p>      
+        </div>
+
+        <div class="band-member">
+          <img class="band-image" src="images/thirdBand.jpg" alt="Adam">
+          <h2>Adam Clayton</h2> 
+          <p>Bass Guitar</p>   
+          <p class="fun-fact">Adam is not only a bassist but also an avid gardener, specializing in growing exotic orchids.</p>      
+        </div>
+
+        <div class="band-member">
+          <img class="band-image" src="images/fourthBand.jpg" alt="Larry">
+          <h2>Larry Jr.</h2>
+          <p>Drums</p>  
+          <p class="fun-fact">Larry, the backbone of U2's rhythm, is a certified yoga instructor and practices daily before performances.</p>      
+        </div>
+      </div>
+
+
+
+
 
         <!-- Concert Dates and Locations -->
-    <section class="concert-dates">
+    <div class="concert-dates-container">
                 <h2>Upcoming Concerts</h2>
                 <table>
                     <tr>
@@ -155,12 +139,12 @@
                 </td>
             </tr>
             </table> 
-    </section>
+      </div>
     
 
     
     <!-- Footer -->
-    <section>
+    <div class="footer-container">
         <footer>
             <p>© 2024 U2 Rock Band. All rights reserved.</p>
             <p>Follow us on Social Media:</p>
@@ -168,11 +152,26 @@
                 <p><a href="https://twitter.com/u2">Twitter</a></p>
                 <p><a href="https://youtube.com/u2">YouTube</a></p>
         </footer>
-    </section>
+    </div>  
   
 
     <script>
       var mysong = document.getElementById("background-audio");
+      var playbtn= document.getElementById("playbtn");
+      var pausebtn= document.getElementById("pausebtn");
+
+      function playSong() {
+        mysong.play();
+        pausebtn.style.display="block";
+        playbtn.style.display="none";
+      }
+      function pauseSong() {
+        mysong.pause();
+        playbtn.style.display="block";
+        pausebtn.style.display="none";
+
+      }
+
     </script>
 </body>
 </html>

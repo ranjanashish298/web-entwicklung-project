@@ -13,30 +13,61 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="index.html">U2</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="gallery.html">GALLERY</a></li>
-            <li><a href="store.html">STORE</a></li>
-            <li><a href="connect.html">CONNECT</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+     <!-- Navigation Bar and other html pages link -->
+     <div class="nav-container">
+      <div class="itemNavigation logo"><a href="index.html">U2</a></div>
+      <div class="itemNavigation home"> <a href="index.html">HOME</a></div>
+      <div class="itemNavigation gallery"> <a href="gallery.html">GALLERY</a></div>
+      <div class="itemNavigation store"> <a href="store.html">STORE</a></div>
+      <div class="itemNavigation connect"> <a href="connect.html">CONNECT</a></div>
+      <div class="itemNavigation connect"> <a href="play.html">PLAY</a></div>
+     </div>
 
-    <p>This will be a Fan connection page!!</p>
 
     
+    <div class="connect-grid-container">
+
+        <div class="itemC connect-intro">
+          <p id="intro">Subscribe to our newsletter to get the latest updates right in your inbox.</p>
+        </div>
+
+        <div class="itemC subscribe-box">
+          <h1>Subscribe Now</h1>
+          <span>Get notified about the next update</span>
+          <hr>
+          <form action="#" method="post">
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="email" name="email_address" placeholder="Email Address" required>
+              <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      
+    </div>
+  
+
+        <!-- Footer -->
+      <div class="footer-container">
+          <footer>
+              <p>© 2024 U2 Rock Band. All rights reserved.</p>
+              <p>Follow us on Social Media:</p>
+              
+                  <p><a href="https://twitter.com/u2">Twitter</a></p>
+                  <p><a href="https://youtube.com/u2">YouTube</a></p>
+          </footer>
+      </div> 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    var forms = document.querySelectorAll('form');
+    forms.forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            alert('Thanks for joining the newsletter! You will start receiving Emails soon'); // Show an alert dialog
+            form.reset();
+        });
+    });
+});
+    </script>  
 </body>
 </html>
     

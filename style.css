@@ -17,7 +17,7 @@
   
 }
 .logo {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   margin-right: auto;
   margin-left: 2rem;
@@ -27,7 +27,7 @@
 
 .video-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 5px;
   background-color: black;
   align-items: center; /* Centers children horizontally */
@@ -35,13 +35,276 @@
 }
 
 .itemVideo {
-  margin: 10px 0;
-  flex: 1; 
+  padding: 10px;
 }
 #background-video {
   max-width: 99.9%;
+  flex: 1; 
 }
-#background-audio {
+
+#playbtn, #pausebtn {
+  width: 60px;
+  height: 60px;
+}
+
+
+/* Band Introduction ********/
+
+.band-container {
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr;
+  grid-template-rows: 450px 450px 450px;
+  gap: 15px;
+}
+.band-intro {
+  padding-top: 140px;
+  text-align: center;
+  grid-column: span 2 ;
+}
+#h2 {
+  font-size: 60px;
+}
+#h2 + p {
+  font-size: 20px;
+  padding-top: 50px;
+}
+.band-member {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 3%;
+  background-color: #ddd;
+  text-align: center;
+}
+
+.band-image {
+  width: 42%;
+  height:60%;
+}
+.fun-fact {
+  text-align: center;
+}
+
+
+/* ****<!-- Concert Dates and Locations --> */
+.concert-dates-container {
+  margin-top: 100px;
+  background-color: black;
+  text-align: center;
+}
+
+table, td, th {
+  color: white;
+  border: 1px solid grey;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+th {
+  text-align: center;
+}
+
+/* <!-- Footer --> */
+.footer-container {
+  margin-top: 100px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* connect.html */
+
+.connect-grid-container {
+  background-image: url('https://i.postimg.cc/Z5wgfkby/rock-band-7060689-1920.jpg');
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr ;
+  grid-template-columns: 1.5fr 2.5fr 1fr;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  padding: 10px;
+  gap: 40px;
+}
+
+.connect-intro {
+  grid-row: 2/3; /* Position it in the first row */
+  grid-column: 1 / 2; /* Span from the first to the last column */
+  text-align: center; /* Center the text inside the div */
+  justify-content: center;
+  background:rgba(241, 237, 237, 0);
+  flex:1;
+}
+#intro {
+  color: white;
+  text-align: center;
+  font-size:35px;
+  font-weight:bold;
+}
+
+.subscribe-box {
+    grid-row: 2; /* Position it in the second row */
+    grid-column: 2/3; /* Position it in the second column */
+    padding: 20px; /* Add some padding */
+    background: rgba(240, 241, 255, 0.9); /* Optional: make background slightly transparent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+}
+
+.subscribe-box h1 {
+  font-size: 36px;
+  color: black;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.subscribe-box span {
+  color: #999;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.subscribe-box hr {
+  width: 70px;
+  color: #999;
+  margin: 25px auto;
+}
+.subscribe-box input {
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+.subscribe-box input:focus-visible {
+  border: 1px solid #1726a6;
+  outline: #20D389;
+}
+.subscribe-box button {
+  width: 100%;
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 5px;
+  background: #120cb2;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  transition: .3s;
+}
+.subscribe-box button:hover {
+  background: #4d5ec1;
+}
+
+
+
+
+
+
+
+
+
+
+/************** Play.html ************/
+
+.play-flexbox-container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background-color: #444e81;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.play-intro {
+  grid-row: 1;
+  grid-column: span 9;
+}
+.play-button-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+#title {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  padding-top: 50px;
+}
+.w {
+  background-image: url("images/tom1.png");
+}
+
+.a {
+  background-image: url("images/tom2.png");
+}
+
+.s {
+  background-image: url("images/tom3.png");
+}
+
+.d {
+  background-image: url("images/tom4.png");
+}
+
+.j {
+  background-image: url("images/snare.png");
+}
+
+.k {
+  background-image: url("images/crash.png");
+}
+
+.l {
+  background-image: url("images/kick.png");
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
 }
 
 
@@ -57,10 +320,7 @@
 
 
 
-
-
-
-@media (max-width: 720px) {
+@media (max-width: 620px) {
   /* Navigation */
   .nav-container  {
     flex-direction: column;
@@ -72,9 +332,87 @@
     text-align: center;
   }
   .logo {
+    font-size: 30px;
    margin-right: 2rem;
   }
 
-
+ 
   /* Video and Audio */
+  .video-container {
+    flex-direction: column;
+  }
+  .itemVideo {
+    padding: 5px;
+    justify-content: flex-start; /* Align content to the left */
+    width: 100%; /* Take full width to spread out content */
+  }
+  #playbtn, #pausebtn {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* band introduction */
+  .band-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,450px);
+    gap: 10px;
+  }
+
+  .band-intro {
+    padding-bottom: 200px;
+    grid-column: span 1 ;
+  }
+  .band-member {
+    height: 100%;
+  }
+  .band-image {
+    width: 45%;
+    height:50%;
+  }
+  
+
+/* connect.html */
+
+.connect-grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr; 
+  gap: 10px;
+}
+.connect-intro {
+  grid-row: 1/2; /* Position it in the first row */
+  grid-column: span 2; /* Span from the first to the last column */
+  text-align: center; /* Center the text inside the div */
+}
+
+#intro {
+  text-align: center;
+  font-size:30px;
+  font-weight: bold;
+  padding-top: 20px ;
+}
+.subscribe-box {
+  grid-row: 2/3; /* Position it in the second row */
+  grid-column: span 2; /* Position it in the second column */
+  padding: 20px; /* Add some padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+}
+
+
+/* play.html ******/
+.play-flexbox-container {
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+}
+.play-intro {
+  grid-column: span 1;
+  min-height: 20px;
+}
+#title {
+  margin-top: 50px;
+}
+
+
+
 }
