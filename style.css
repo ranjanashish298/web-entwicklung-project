@@ -1,77 +1,661 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  box-sizing: border-box;
+/* Common ****/
+
+/* <!-- Footer --> */
+.footer-container {
+  background-color: #222; /* Dark background for the footer for contrast */
+  color: #fff; /* Light text color for readability */
+  text-align: center; /* Center-align the text */
+  padding: 20px 0; /* Padding for spacing inside the footer */
+  font-family: 'Lato', sans-serif; /* Consistent font style */
 }
+
+footer {
+  margin: auto;
+  width: 80%; /* Limit the width of the footer content */
+  padding: 20px 0; /* Padding around the content */
+}
+
+footer p {
+  margin: 10px 0; /* Spacing between paragraphs */
+  font-size: 16px; /* Slightly larger font size for better readability */
+}
+
+footer a {
+  color: #9f9f9f; /* Light grey color for links, making them distinct but not too bright */
+  text-decoration: none; /* No underline to keep it clean */
+  font-weight: bold; /* Makes the links slightly bolder */
+}
+
+footer a:hover, footer a:focus {
+  color: #00aeef; /* Change color on hover and focus to give feedback */
+  text-decoration: underline; /* Underline on hover to indicate interactivity */
+  cursor: pointer; /* Cursor changes to pointer to indicate a link */
+}
+
+
+/****** Navigation and Links ******/
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: black;
+}
+.nav-container a {
+  color: #00aeef;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.nav-container a:hover {
+  color: #ddd;
+  text-decoration: underline;
+}
+.itemNavigation {
+  font-size: 20px;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: 2rem;
+}
+
+/****** Video *******/
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-color: black;
+  align-items: center; /* Centers children horizontally */
+  justify-content: center;
+}
+
+.itemVideo {
+  padding: 10px;
+}
+#background-video {
+  max-width: 99.9%;
+  flex: 1; 
+}
+
+#playbtn, #pausebtn {
+  width: 60px;
+  height: 60px;
+}
+
+
+/* Band Introduction ********/
+
+.band-container {
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr;
+  grid-template-rows: 450px 450px 450px;
+  gap: 15px;
+}
+.band-intro {
+  padding-top: 140px;
+  text-align: center;
+  grid-column: span 2 ;
+}
+#h2 {
+  font-size: 60px;
+}
+#h2 + p {
+  font-size: 20px;
+  padding-top: 50px;
+}
+.band-member {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 3%;
+  background-color: #ddd;
+  text-align: center;
+}
+
+.band-image {
+  width: 42%;
+  height:60%;
+}
+.fun-fact {
+  text-align: center;
+}
+
+
+/* ****<!-- Concert Dates and Locations --> */
+.concert-dates-container {
+  margin-top: 100px;
+  background-color: black;
+  text-align: center;
+}
+
+table, td, th {
+  color: white;
+  border: 1px solid grey;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+th {
+  text-align: center;
+}
+
+
+
+
+
+/******* Gallery.html *****/
+.media-container-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-template-rows: auto 1fr; /* First row for text, second row for carousel */
+  gap: 20px; /* Adds space between grid items */
+  padding: 20px; /* Padding around the entire grid */
+  max-width: 1300px; /* Maximum width of the grid */
+  margin: auto; /* Center the grid horizontally */
+}
+
+.itemM {
+  font-size: 1.2rem; /* Larger text for the introduction */
+  text-align: center; /* Center-align the text */
+  padding: 10px; /* Padding for better spacing */
+}
+#carouselExample {
+  width: 100%; /* Ensures the carousel takes the full width of the grid column */
+  grid-row: 2; /* Places the carousel in the second row of the grid */
+}
+
+.carousel-item img {
+  width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures images cover the area without stretching */
+}
+#carouselExample .carousel-inner {
+  border-radius: 10px; /* Rounded corners for the carousel */
+  overflow: hidden; /* Ensures the images fit within the corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Subtle shadow around the carousel */
+}
+
+.ytvideo-container-grid {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Creates as many columns as can fit, min 300px wide */
+  gap: 20px; /* Space between videos */
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  width: 100%;
+  height: auto; /* Adjust based on the aspect ratio */
+  aspect-ratio: 16 / 9; /* Modern CSS property to control video aspect ratio */
+}
+iframe {
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out; /* Smooth transform effect */
+}
+
+iframe:hover {
+  transform: scale(1.10); /* Slightly enlarge on hover */
+}
+
+.intro-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* General styling for all intro texts to add spacing and alignment */
+.intro-text {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background to make it stand out */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* connect.html */
+
+.connect-grid-container {
+  background-image: url('https://i.postimg.cc/Z5wgfkby/rock-band-7060689-1920.jpg');
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr ;
+  grid-template-columns: 1.5fr 2.5fr 1fr;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  padding: 10px;
+  gap: 40px;
+}
+
+.connect-intro {
+  grid-row: 2/3; /* Position it in the first row */
+  grid-column: 1 / 2; /* Span from the first to the last column */
+  text-align: center; /* Center the text inside the div */
+  justify-content: center;
+  background:rgba(241, 237, 237, 0);
+  flex:1;
+}
+#intro {
+  color: white;
+  text-align: center;
+  font-size:35px;
+  font-weight:bold;
+}
+
+.subscribe-box {
+    grid-row: 2; /* Position it in the second row */
+    grid-column: 2/3; /* Position it in the second column */
+    padding: 20px; /* Add some padding */
+    background: rgba(240, 241, 255, 0.9); /* Optional: make background slightly transparent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+}
+
+.subscribe-box h1 {
+  font-size: 36px;
+  color: black;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.subscribe-box span {
+  color: #999;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.subscribe-box hr {
+  width: 70px;
+  color: #999;
+  margin: 25px auto;
+}
+.subscribe-box input {
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+.subscribe-box input:focus-visible {
+  border: 1px solid #1726a6;
+  outline: #20D389;
+}
+.subscribe-box button {
+  width: 100%;
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 5px;
+  background: #120cb2;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  transition: .3s;
+}
+.subscribe-box button:hover {
+  background: #4d5ec1;
+}
+
+
+
+
+
+
+
+
+
+
+/************** Play.html ************/
+
+.play-flexbox-container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background-color: #444e81;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.play-intro {
+  grid-row: 1;
+  grid-column: span 9;
+}
+.play-button-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+#title {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  padding-top: 50px;
+}
+.w {
+  background-image: url("images/tom1.png");
+}
+
+.a {
+  background-image: url("images/tom2.png");
+}
+
+.s {
+  background-image: url("images/tom3.png");
+}
+
+.d {
+  background-image: url("images/tom4.png");
+}
+
+.j {
+  background-image: url("images/snare.png");
+}
+
+.k {
+  background-image: url("images/crash.png");
+}
+
+.l {
+  background-image: url("images/kick.png");
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 620px) {
+
+  /* Common **/
+  .footer-container {
+    text-align: center; /* Center text on small screens */
+    padding: 20px 10px; /* Adjust padding */
+  }
+  footer {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  /* Navigation */
+  .nav-container  {
+    flex-direction: column;
+  }
+  .itemNavigation {
+    font-size: 15px;
+    flex-basis: 5px;
+    width: 300px;
+    text-align: center;
+  }
+  .logo {
+    font-size: 30px;
+   margin-right: 2rem;
+  }
+
+ 
+  /* Video and Audio */
+  .video-container {
+    flex-direction: column;
+  }
+  .itemVideo {
+    padding: 5px;
+    justify-content: flex-start; /* Align content to the left */
+    width: 100%; /* Take full width to spread out content */
+  }
+  #playbtn, #pausebtn {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* band introduction */
+  .band-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,450px);
+    gap: 10px;
+  }
+
+  .band-intro {
+    padding-bottom: 200px;
+    grid-column: span 1 ;
+  }
+  .band-member {
+    height: 100%;
+  }
+  .band-image {
+    width: 45%;
+    height:50%;
+  }
+  
+  /******* Gallery.html *****/
+
+  .ytvideo-container-grid {
+    grid-template-columns: 400px; /* Only 1 column on smaller screens */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* connect.html */
+
+.connect-grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr; 
+  gap: 10px;
+}
+.connect-intro {
+  grid-row: 1/2; /* Position it in the first row */
+  grid-column: span 2; /* Span from the first to the last column */
+  text-align: center; /* Center the text inside the div */
+}
+
+#intro {
+  text-align: center;
+  font-size:30px;
+  font-weight: bold;
+  padding-top: 20px ;
+}
+.subscribe-box {
+  grid-row: 2/3; /* Position it in the second row */
+  grid-column: span 2; /* Position it in the second column */
+  padding: 20px; /* Add some padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+}
+
+
+/* play.html ******/
+.play-flexbox-container {
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+}
+.play-intro {
+  grid-column: span 1;
+  min-height: 20px;
+}
+#title {
+  margin-top: 50px;
+}
+
+
+/* Responsiveness for Ipad, bigger than mobile *****/
+
+
+
+
+
+
+
+/* Media.html ****/
+@media (min-width: 601px) and (max-width: 900px) {
+  .ytvideo-container-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns in mid-size screens */
+  }
+}
+
+}
+
+
 
 /*------------------------Store-------------------------*/
 
-#storeBody, #cartBody {
-  text-align: center;
-  font: 400 15px/1.8 Lato, sans-serif;
-  color: #777;
-}
-
-#storeBody > *, #cartBody > * {
-  padding: 20px;
-}
-
 #storeHeader {
-  padding-bottom: 30px;
   color: black;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.storeSidebar {
-	background: rgb(66, 66, 69);
-  font-family: Montserrat, sans-serif;
+#storeHeader h1 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.storeSidebar > ul {
+#storeHeader p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+#storeSidebar {
+	background: black;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 8px;
+}
+
+#storeSidebar > ul {
   display: flex;
   list-style: none;
   text-align: start;
   justify-content: space-around;
   padding-left: 0;
+  padding-top: 10px;
 }
 
-.storeSidebar > ul li a {
-  text-decoration: none;
-  color: #dfdfdf;
+#storeSidebar > ul li a {
+  color: #00aeef;
 }
 
-.storeSidebar > ul li a:hover {
-  color: white;
+#storeSidebar > ul li a:hover {
+  color: #ddd;
 }
 
-.store {
+#store {
   margin: 2em;
+  padding-bottom: 10.6vh;
 }
 
 .storeContainer > button {
-  background: rgb(66, 66, 69);
-  font-family: Montserrat, sans-serif;
+  background: black;
   border: none;
   padding: 1em;
   margin: 0;
-  color: white;
+  color: #00aeef;
   width: 100%;
   text-align: left;
   font-size: x-large;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 8px;
 }
 
 .storeContainer > button:hover {
-  background: rgb(42, 42, 47);
+  background: rgb(30, 30, 30);
+  color: #ddd;
 }
 
 .storeContainer > ul {
   list-style: none;
   display: grid;
   justify-content: center;
-  background: rgb(226, 226, 229);
+  background: #eaebec;
   grid-gap: 1.5em;
   margin: 0;
+  border-radius: 8px;
 }
 
 .storeCollapsible {
@@ -80,7 +664,7 @@ html, body {
   transition: max-height 0.2s ease-out;
 }
 
-.store {
+#store {
   display: grid;
   grid-template-rows: minmax(1em, auto) auto 1fr auto minmax(1em, auto);
 }
@@ -88,26 +672,32 @@ html, body {
 .storeContainer > ul li {
   background: white;
   border: thin solid gray;
-  height: 314px;
+  height: 307px;
   width: 270px;
   margin-top: 25px;
   margin-bottom: 25px;
+  margin-left: -40px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+#storeSidebar {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 #cart {
-  height: 40px;
   font-size: 22px;
-  text-decoration: none;
   margin-top: 10px;
-  color: rgb(46, 46, 49);
+  color: black;
   text-align: end;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .cost {
   color: rgb(75, 75, 75);
   float: left;
-  margin-left: 15px;
+  margin-left: 18px;
   font-size: large;
 }
 
@@ -119,7 +709,6 @@ html, body {
   background: white;
   border: thin solid darkgray;
   height: 30px;
-  margin-right: -15px;
 }
 
 .addToCart {
@@ -132,11 +721,11 @@ html, body {
 }
 
 .addToCart:hover {
-  background: rgb(244, 244, 250);
+  background: #E0E0E6;
 }
 
 .addToCart:active {
-  background: rgb(224, 224, 230);
+  background: #d0d0d6;
 }
 
 .collapsibleButton:after { /*add plus/minus to button for collapsible*/
@@ -147,7 +736,7 @@ html, body {
   float: right;
   margin-right: 13px;
 }
-  
+
 .collapsibleButton.active:after {
   content: "+";
 }
@@ -158,6 +747,7 @@ html, body {
 
 .comingSoonNotice {
   line-height: 300px;
+  text-align: center;
 }
 
 @media screen and (min-width: 767px) {
@@ -170,35 +760,32 @@ html, body {
     margin-left: 15px;
   }
 
-  .storeSidebar > ul {
-    text-align: center;
-    padding: 0;
-  }
-
-  .storeSidebar > ul li {
+  #storeSidebar > ul li {
     padding: 4px;
   }
 
-	.store {
+	#store {
 		display: grid;
 		grid-template-columns: 1fr 10em repeat(5, minmax(auto, 15em)) 1fr;
 		grid-template-rows: minmax(1em, auto) auto 1fr auto minmax(1em, auto);
 	}
 
   #storeHeader {
-    grid-column: 2/6;
-    text-align: start;
+    grid-column: 2/8;
   }
 
-  .storeSidebar > ul {
+  #storeSidebar > ul {
     margin-top: 40px;
     display: block;
     margin-left: 0;
+    text-align: center;
+    font-size: 15px;
+    padding: 0;
   }
 
   #cart {
-    grid-column: 7/7;
-    padding-top: 0.8em;
+    grid-column: 7/8;
+    padding-bottom: 1em;
   }
   
 	.storeContainer {
@@ -206,30 +793,40 @@ html, body {
 		grid-column: 3/8;
 	}
 
-	.storeSidebar {
+	#storeSidebar {
 		grid-column: 2/2;
+    margin-top: 0;
+    margin-bottom: 0;
 	}
+
+  .storeContainer > ul li {
+    margin-left: 0;
+  }
 }
 /*------------------------------------------------------*/
 
 /*-------------------------Cart-------------------------*/
-.cart {
+#cartPage {
   display: grid;
   grid-template-rows: minmax(1em, auto) auto 1fr auto minmax(1em, auto);
-  margin: 2em;
+  margin: 4.7em;
+  padding-bottom: 28.3vh;
 }
 
 .cartContainer {
-  background: rgb(226, 226, 229);
+  background: #eaebec;
+  border-radius: 8px;
 }
 
 #cartHeader {
-  background: rgb(66, 66, 69);
-  color: white;
-  padding: 20px;
+  background: black;
+  color: #00aeef;
+  font-size: x-large;
   margin-bottom: 0;
-  font-family: Montserrat, sans-serif;
   text-align: start;
+  padding: 1.16em;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 8px;
 }
 
 .cartContainer > ul {
@@ -247,12 +844,12 @@ html, body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.cartContainer > ul button:hover {
-  background: rgb(244, 244, 250);
+#checkout:hover, .cartContainer > ul button:hover {
+  background: #E0E0E6;
 }
 
-.cartContainer > ul button:hover {
-  background: rgb(224, 224, 230);
+#checkout:active, .cartContainer > ul button:hover {
+  background: #d0d0d6;
 }
 
 .cartContainer > ul li {
@@ -277,31 +874,24 @@ html, body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-#checkout:hover {
-  background: rgb(244, 244, 250);
-}
-
-#checkout:active {
-  background: rgb(224, 224, 230);
-}
-
 #emptyCart {
-  line-height: 130px;
-  padding: 0;
+  text-align: center;
+  line-height: 140px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #backToStore {
-  width: 130px;
+  width: 150px;
   font-size: 22px;
-  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
   margin-top: 10px;
-  color: rgb(46, 46, 49);
+  color: black;
   text-align: start;
 }
 
 @media screen and (min-width: 767px) {
 
-	.cart {
+	#cartPage {
 		display: grid;
 		grid-template-columns: 1fr minmax(auto, 30em) 1fr;
 		grid-template-rows: minmax(1em, auto) auto 1fr auto minmax(1em, auto);

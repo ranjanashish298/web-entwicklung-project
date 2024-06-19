@@ -1,45 +1,39 @@
-<!doctype html>
-<html lang="de">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock and Roll Band Store</title>
+  <title>U2 Store</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
 </head>
 
-<body id="storeBody" onload="initCart()">
-
-  <div>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="index.html">U2</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="gallery.html">GALLERY</a></li>
-            <li><a href="store.html">STORE</a></li>
-            <li><a href="connect.html">CONNECT</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<body onload="initCart()">
+  <div class="nav-container">
+    <div class="itemNavigation logo"><a href="index.html">U2</a></div>
+    <div class="itemNavigation home"> <a href="index.html">HOME</a></div>
+    <div class="itemNavigation gallery"> <a href="media.html">MEDIA</a></div>
+    <div class="itemNavigation store"> <a href="store.html">STORE</a></div>
+    <div class="itemNavigation connect"> <a href="connect.html">CONNECT</a></div>
+    <div class="itemNavigation connect"> <a href="play.html">PLAY</a></div>
   </div>
   
-  <div class="store">
-    <h1 id="storeHeader">Rock and Roll Band | Store</h1>
-    
+  <div id="store">
+    <div id="storeHeader">
+      <h1>U2 Store</h1>
+      <p>Pick up some merchandise to show off...</p>
+    </div>
     <a id="cart" href="cart.html"></a>
-    <aside class="storeSidebar">
+    <aside id="storeSidebar">
       <ul>
         <li><a href="#tshirts">T-Shirts</a></li>
         <li><a href="#hoodies">Hoodies</a></li>
@@ -204,14 +198,15 @@
     </main>
   </div>
 
-  <div>
-    <footer>
-      <p>© 2024 U2 Rock Band. All rights reserved.</p>
-      <p>Follow us on Social Media:</p>
-      <p><a href="https://twitter.com/u2">Twitter</a></p>
-      <p><a href="https://youtube.com/u2">YouTube</a></p>
-    </footer>
-  </div>
+  <div class="footer-container">
+  <footer>
+    <p>© 2024 U2 Rock Band. All rights reserved.</p>
+    <p>Follow us on Social Media:</p>
+        
+    <p><a href="https://twitter.com/u2">Twitter</a></p>
+    <p><a href="https://youtube.com/u2">YouTube</a></p>
+  </footer>
+  </div>  
 
   <script src="script.js"></script>
 </body>

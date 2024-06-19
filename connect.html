@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with U2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+</head>
+<body>
+
+<!-- Navigation Bar and other html pages link -->
+<div class="nav-container">
+    <div class="itemNavigation logo"><a href="index.html">U2</a></div>
+    <div class="itemNavigation home"> <a href="index.html">HOME</a></div>
+    <div class="itemNavigation gallery"> <a href="media.html">MEDIA</a></div>
+    <div class="itemNavigation store"> <a href="store.html">STORE</a></div>
+    <div class="itemNavigation connect"> <a href="connect.html">CONNECT</a></div>
+    <div class="itemNavigation connect"> <a href="play.html">PLAY</a></div>
+</div>
+
+
+    
+    <div class="connect-grid-container">
+
+        <div class="itemC connect-intro">
+        <p id="intro">Subscribe to our newsletter to get the latest updates right in your inbox.</p>
+        </div>
+
+        <div class="itemC subscribe-box">
+        <h1>Subscribe Now</h1>
+        <span>Get notified about the next update</span>
+        <hr>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email_address" placeholder="Email Address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        </div>
+    </div>
+
+        <!-- Footer -->
+    <div class="footer-container">
+        <footer>
+            <p>© 2024 U2 Rock Band. All rights reserved.</p>
+            <p>Follow us on Social Media:</p>
+            
+                <p><a href="https://twitter.com/u2">Twitter</a></p>
+                <p><a href="https://youtube.com/u2">YouTube</a></p>
+        </footer>
+    </div> 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    var forms = document.querySelectorAll('form');
+    forms.forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            alert('Thanks for joining the newsletter! You will start receiving Emails soon'); // Show an alert dialog
+            form.reset();
+        });
+    });
+});
+    </script>  
+</body>
+</html>
+    

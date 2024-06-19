@@ -3,9 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>U2 Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
 </head>
 <body>
-    <p>Hello</p>
+    
+    <!-- Navigation Bar and other html pages link -->
+    <div class="nav-container">
+        <div class="itemNavigation logo"><a href="index.html">U2</a></div>
+        <div class="itemNavigation home"> <a href="index.html">HOME</a></div>
+        <div class="itemNavigation gallery"> <a href="media.html">MEDIA</a></div>
+        <div class="itemNavigation store"> <a href="store.html">STORE</a></div>
+        <div class="itemNavigation connect"> <a href="connect.html">CONNECT</a></div>
+        <div class="itemNavigation connect"> <a href="play.html">PLAY</a></div>
+    </div>
+    
+
+
+
+    <!-- Video Player -->
+    <div class="video-container">
+
+      <div class="itemVideo">
+        <video  autoplay muted loop id="background-video">
+          <source src="video/12525522-uhd_3840_2160_60fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="itemVideo">
+          <audio id="background-audio">
+              <source src="songs/WithorWithoutYou.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>
+          <img src="images/play.png" id="playbtn" onclick="playSong()">
+          <img src="images/pause.png" id="pausebtn" onclick="pauseSong()" style="display: none;">
+      </div>
+    </div>
+
+
+    <!-- Band Introduction -->
+
+    <div class="band-container">
+        <div class="band-intro">
+            <h2 id="h2">Meet the Band</h2>
+            <p>Meet the legendary members of U2, each bringing their unique flair and unstoppable energy to the world of rock music.</p>    
+        </div> 
+
+        <div class="band-member">
+          <img class="band-image" src="images/bono.jpg" alt="Bono">
+          <h2>Bono</h2>
+          <p>Vocals</p>   
+          <p class="fun-fact">Aside from his captivating voice, Bono can speak fluent Spanish and loves to write poetry in his downtime.</p>      
+        </div>
+
+        <div class="band-member">
+          <img class="band-image" src="images/secondBand.jpg" alt="Edge">
+          <h2>The Edge</h2>
+          <p>Guitar</p>   
+          <p class="fun-fact">Known for his iconic sound, The Edge also has a quirky hobby of collecting rare vintage hats from around the globe.</p>      
+        </div>
+
+        <div class="band-member">
+          <img class="band-image" src="images/thirdBand.jpg" alt="Adam">
+          <h2>Adam Clayton</h2> 
+          <p>Bass Guitar</p>   
+          <p class="fun-fact">Adam is not only a bassist but also an avid gardener, specializing in growing exotic orchids.</p>      
+        </div>
+
+        <div class="band-member">
+          <img class="band-image" src="images/fourthBand.jpg" alt="Larry">
+          <h2>Larry Jr.</h2>
+          <p>Drums</p>  
+          <p class="fun-fact">Larry, the backbone of U2's rhythm, is a certified yoga instructor and practices daily before performances.</p>      
+        </div>
+      </div>
+
+
+
+
+
+        <!-- Concert Dates and Locations -->
+    <div class="concert-dates-container">
+                <h2>Upcoming Concerts</h2>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                        <th>Map</th>
+
+                    </tr>
+                    <tr>
+                        <td>01.09.2024</td>
+                        <td>19:00</td>
+                        <td>New York, NY</td>
+                        <td>
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.0360471489!2d-74.30932653769423!3d40.697539967187986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sde!4v1717605652649!5m2!1sen!2sde" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>04.09.2024</td>
+                      <td>21:00</td>
+                      <td>Dublin, Ireland</td>
+                      <td>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152515.365955372!2d-6.41051016080597!3d53.324411630601645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin%2C%20Ireland!5e0!3m2!1sen!2sde!4v1717605794538!5m2!1sen!2sde" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>07.09.2024</td>
+                    <td>20:00</td>
+                    <td>Worms, Germany</td>
+                    <td>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82643.93337522293!2d8.259783561568966!3d49.661403886132064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47962bc14f284789%3A0x422d4d510db1be0!2sWorms!5e0!3m2!1sen!2sde!4v1717605918709!5m2!1sen!2sde" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </td>
+                </tr>
+                <tr>
+                  <td>11-09-2024</td>
+                  <td>21:00</td>
+                  <td>Berlin, Germany</td>
+                  <td> 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d310844.3629293984!2d13.095097344122937!3d52.5068041643767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e373f035901%3A0x42120465b5e3b70!2sBerlin!5e0!3m2!1sen!2sde!4v1717605892116!5m2!1sen!2sde" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </td>
+              </tr>
+              <tr>
+                <td>15-09-2024</td>
+                <td>22:00</td>
+                <td>Bora-Bora, France</td>
+                <td>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61206.89191516492!2d-151.77984892482942!3d-16.504337668834367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76bdbd188a4a98ab%3A0x160a089e92d5ce61!2sBora%20Bora!5e0!3m2!1sen!2sde!4v1717605713829!5m2!1sen!2sde" width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </td>
+            </tr>
+            </table> 
+      </div>
+    
+
+    
+    <!-- Footer -->
+    <div class="footer-container">
+        <footer>
+            <p>© 2024 U2 Rock Band. All rights reserved.</p>
+            <p>Follow us on Social Media:</p>
+            
+                <p><a href="https://twitter.com/u2">Twitter</a></p>
+                <p><a href="https://youtube.com/u2">YouTube</a></p>
+        </footer>
+    </div>  
+  
+
+    <script>
+      var mysong = document.getElementById("background-audio");
+      var playbtn= document.getElementById("playbtn");
+      var pausebtn= document.getElementById("pausebtn");
+
+      function playSong() {
+        mysong.play();
+        pausebtn.style.display="block";
+        playbtn.style.display="none";
+      }
+      function pauseSong() {
+        mysong.pause();
+        playbtn.style.display="block";
+        pausebtn.style.display="none";
+
+      }
+
+    </script>
 </body>
 </html>
+    

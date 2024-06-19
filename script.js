@@ -98,7 +98,7 @@ function loadCart() {
             empty.innerHTML = "EMPTY";
             empty.setAttribute('id','emptyCart');
             list.parentElement.append(empty);
-            list.parentElement.style.height = "200px";
+            list.parentElement.style.height = "172px";
         }
     } 
 }
