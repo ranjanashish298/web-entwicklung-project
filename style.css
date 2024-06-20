@@ -11,7 +11,6 @@
 
 footer {
   margin: auto;
-  width: 80%; /* Limit the width of the footer content */
   padding: 20px 0; /* Padding around the content */
 }
 
@@ -47,7 +46,6 @@ footer a:hover, footer a:focus {
 }
 .nav-container a:hover {
   color: #ddd;
-  text-decoration: underline;
 }
 .itemNavigation {
   font-size: 20px;
@@ -60,6 +58,18 @@ footer a:hover, footer a:focus {
   font-weight: bold;
   margin-right: auto;
   margin-left: 2rem;
+}
+.play-button a {
+  background-color: #00aeef; /* Light blue background for the button */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Padding to make it look like a button */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.play-button a:hover {
+  background-color: #007B9C; /* Darker blue on hover */
+  color: #d0d0d0; /* Light grey text on hover */
 }
 
 /****** Video *******/
@@ -91,61 +101,89 @@ footer a:hover, footer a:focus {
 
 .band-container {
   display: grid;
-  grid-template-columns: 0.8fr 0.8fr;
-  grid-template-rows: 450px 450px 450px;
-  gap: 15px;
+  grid-template-columns: repeat(4, 1fr); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+  align-items: start; /* Align items at the start of each cell */
 }
 .band-intro {
-  padding-top: 140px;
+  grid-column: 1 / -1; /* Span across all columns */
+  padding: 20px;
   text-align: center;
-  grid-column: span 2 ;
+}
+h2 {
+  margin: 10px 0 5px; /* Spacing around headers */
 }
 #h2 {
-  font-size: 60px;
+  font-size: 4.5rem; /* Responsive font size */
+  margin-bottom: 0.5em;
 }
 #h2 + p {
-  font-size: 20px;
-  padding-top: 50px;
+  font-size: 1.2rem;
 }
 .band-member {
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 3%;
-  background-color: #ddd;
-  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align the content */
 }
 
 .band-image {
-  width: 42%;
-  height:60%;
+  width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 10px;
 }
 .fun-fact {
-  text-align: center;
+  font-style: italic;
+  color: #555;
+  padding-top: 10px;
 }
 
 
 /* ****<!-- Concert Dates and Locations --> */
 .concert-dates-container {
-  margin-top: 100px;
-  background-color: black;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #1a1a1a; /* Darker shade for better contrast */
+  color: #f0f0f0; /* Lighter text for readability */
   text-align: center;
+  border-radius: 8px; /* Rounded corners */
 }
-
-table, td, th {
-  color: white;
-  border: 1px solid grey;
+.concert-dates-container h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 2.5rem;
 }
-
 table {
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse; /* Removes double borders */
+  margin: auto;
+}
+th, td {
+  padding: 12px;
+  border: 1px solid #444; /* Subtle borders for less visual noise */
 }
 
-td {
-  text-align: center;
-}
 th {
-  text-align: center;
+  background-color: #333; /* Slightly lighter header for distinction */
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #282828; /* Zebra striping for rows */
+}
+
+tbody tr:hover {
+  background-color: #404040; /* Hover effect for interactivity */
+}
+
+.map-cell iframe {
+  border-radius: 4px; /* Rounded corners for embedded maps */
 }
 
 
@@ -471,24 +509,26 @@ iframe:hover {
 
   /* band introduction */
   .band-container {
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5,450px);
-    gap: 10px;
   }
 
-  .band-intro {
-    padding-bottom: 200px;
-    grid-column: span 1 ;
-  }
   .band-member {
-    height: 100%;
+    padding: 15px;
   }
-  .band-image {
-    width: 45%;
-    height:50%;
+
+  #h2 {
+    font-size: 2rem;
   }
-  
+  th, td {
+    padding: 8px; /* Smaller padding for smaller screens */
+  }
+
+  .map-cell iframe {
+    width: 100%; /* Ensure maps resize correctly */
+    height: 80px; /* Smaller height on mobile */
+  }
+
+
   /******* Gallery.html *****/
 
   .ytvideo-container-grid {
@@ -573,7 +613,6 @@ iframe:hover {
 }
 
 }
-
 
 
 /*------------------------Store-------------------------*/
