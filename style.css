@@ -658,6 +658,7 @@ iframe:hover {
 
 #storeSidebar > ul li a {
   color: #00aeef;
+  text-decoration: none;
 }
 
 #storeSidebar > ul li a:hover {
@@ -761,10 +762,12 @@ iframe:hover {
 
 .addToCart:hover {
   background: #E0E0E6;
+  color: rgb(29, 29, 29);
 }
 
 .addToCart:active {
   background: #d0d0d6;
+  color: rgb(29, 29, 29);
 }
 
 .collapsibleButton:after { /*add plus/minus to button for collapsible*/
@@ -885,11 +888,14 @@ iframe:hover {
 
 #checkout:hover, .cartContainer > ul button:hover {
   background: #E0E0E6;
+  color: rgb(29, 29, 29);
 }
 
 #checkout:active, .cartContainer > ul button:hover {
   background: #d0d0d6;
+  color: rgb(29, 29, 29);
 }
+
 
 .cartContainer > ul li {
   grid-column: 2/2;
