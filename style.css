@@ -712,13 +712,17 @@ iframe:hover {
 .storeContainer > ul li {
   background: white;
   border: thin solid gray;
-  height: 307px;
+  height: 309px;
   width: 270px;
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: -40px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+}
+
+.storeForm {
+  display: flex;
 }
 
 #storeSidebar {
@@ -736,9 +740,9 @@ iframe:hover {
 
 .cost {
   color: rgb(75, 75, 75);
-  float: left;
   margin-left: 18px;
   font-size: large;
+  margin-top: 3px;
 }
 
 .size {
@@ -756,8 +760,6 @@ iframe:hover {
   background: white;
   border: thin solid darkgray;
   height: 30px;
-  float: right;
-  margin-right: 5px;
 }
 
 .addToCart:hover {
@@ -770,12 +772,16 @@ iframe:hover {
   color: rgb(29, 29, 29);
 }
 
+.collapsibleButton {
+  display: flex;
+  justify-content: space-between;
+}
+
 .collapsibleButton:after { /*add plus/minus to button for collapsible*/
   content: "−";
   font-size: 24px;
   font-weight: bold;
   color: white;
-  float: right;
   margin-right: 13px;
 }
 
@@ -882,7 +888,6 @@ iframe:hover {
   grid-column: 3/3;
   background: white;
   border: thin solid darkgray;
-  float: left;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -914,9 +919,9 @@ iframe:hover {
   border: thin solid darkgray;
   height: 38px;
   font-size: large;
-  float: inline-end;
   margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  float: right;
 }
 
 #emptyCart {
