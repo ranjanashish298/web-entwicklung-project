@@ -2,33 +2,33 @@
 
 /* <!-- Footer --> */
 .footer-container {
-  background-color: #222; /* Dark background for the footer for contrast */
-  color: #fff; /* Light text color for readability */
-  text-align: center; /* Center-align the text */
-  padding: 20px 0; /* Padding for spacing inside the footer */
-  font-family: 'Lato', sans-serif; /* Consistent font style */
+  background-color: #222; 
+  color: #fff; 
+  text-align: center; 
+  padding: 20px 0; 
+  font-family: 'Lato', sans-serif; 
 }
 
 footer {
   margin: auto;
-  padding: 20px 0; /* Padding around the content */
+  padding: 20px 0; 
 }
 
 footer p {
-  margin: 10px 0; /* Spacing between paragraphs */
-  font-size: 16px; /* Slightly larger font size for better readability */
+  margin: 10px 0; 
+  font-size: 16px; 
 }
 
 footer a {
-  color: #9f9f9f; /* Light grey color for links, making them distinct but not too bright */
-  text-decoration: none; /* No underline to keep it clean */
-  font-weight: bold; /* Makes the links slightly bolder */
+  color: #9f9f9f; 
+  text-decoration: none; /*Remove underline */ 
+  font-weight: bold; 
 }
 
 footer a:hover, footer a:focus {
-  color: #00aeef; /* Change color on hover and focus to give feedback */
-  text-decoration: underline; /* Underline on hover to indicate interactivity */
-  cursor: pointer; /* Cursor changes to pointer to indicate a link */
+  color: #00aeef; 
+  text-decoration: underline; 
+  cursor: pointer; 
 }
 
 
@@ -60,16 +60,16 @@ footer a:hover, footer a:focus {
   margin-left: 2rem;
 }
 .play-button a {
-  background-color: #00aeef; /* Light blue background for the button */
-  color: #fff; /* White text color */
-  padding: 10px 20px; /* Padding to make it look like a button */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  background-color: #00aeef; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s, color 0.3s; /* transition for hover effect */
 }
 
 .play-button a:hover {
-  background-color: #007B9C; /* Darker blue on hover */
-  color: #d0d0d0; /* Light grey text on hover */
+  background-color: #007B9C; 
+  color: #d0d0d0; 
 }
 
 /****** Video *******/
@@ -79,7 +79,7 @@ footer a:hover, footer a:focus {
   flex-wrap: wrap;
   gap: 5px;
   background-color: black;
-  align-items: center; /* Centers children horizontally */
+  align-items: center; 
   justify-content: center;
 }
 
@@ -101,21 +101,21 @@ footer a:hover, footer a:focus {
 
 .band-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Responsive grid */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 20px;
   padding: 20px;
-  align-items: start; /* Align items at the start of each cell */
+  align-items: start; 
 }
 .band-intro {
-  grid-column: 1 / -1; /* Span across all columns */
+  grid-column: 1 / -1; 
   padding: 20px;
   text-align: center;
 }
 h2 {
-  margin: 10px 0 5px; /* Spacing around headers */
+  margin: 10px 0 5px; 
 }
 #h2 {
-  font-size: 4.5rem; /* Responsive font size */
+  font-size: 4.5rem; 
   margin-bottom: 0.5em;
 }
 #h2 + p {
@@ -125,16 +125,16 @@ h2 {
   background-color: #f4f4f4;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center-align the content */
+  align-items: center; 
 }
 
 .band-image {
-  width: 100%; /* Responsive width */
+  width: 100%; 
   height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Rounded corners for images */
+  border-radius: 8px; 
   margin-bottom: 10px;
 }
 .fun-fact {
@@ -148,10 +148,10 @@ h2 {
 .concert-dates-container {
   margin-top: 50px;
   padding: 20px;
-  background-color: #1a1a1a; /* Darker shade for better contrast */
-  color: #f0f0f0; /* Lighter text for readability */
+  background-color: #1a1a1a; 
+  color: #f0f0f0; 
   text-align: center;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
 }
 .concert-dates-container h2 {
   margin-bottom: 20px;
@@ -165,7 +165,7 @@ table {
 }
 th, td {
   padding: 12px;
-  border: 1px solid #444; /* Subtle borders for less visual noise */
+  border: 1px solid #444; 
 }
 
 th {
@@ -175,15 +175,15 @@ th {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #282828; /* Zebra striping for rows */
+  background-color: #282828; 
 }
 
 tbody tr:hover {
-  background-color: #404040; /* Hover effect for interactivity */
+  background-color: #404040; 
 }
 
 .map-cell iframe {
-  border-radius: 4px; /* Rounded corners for embedded maps */
+  border-radius: 4px; 
 }
 
 
@@ -193,40 +193,39 @@ tbody tr:hover {
 /******* Gallery.html *****/
 .media-container-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-template-rows: auto 1fr; /* First row for text, second row for carousel */
-  gap: 20px; /* Adds space between grid items */
-  padding: 20px; /* Padding around the entire grid */
-  max-width: 1300px; /* Maximum width of the grid */
-  margin: auto; /* Center the grid horizontally */
+  grid-template-columns: 1fr; 
+  grid-template-rows: auto 1fr; 
+  gap: 20px; 
+  padding: 20px; 
+  max-width: 1300px; 
+  margin: auto; 
 }
 
 .itemM {
-  font-size: 1.2rem; /* Larger text for the introduction */
-  text-align: center; /* Center-align the text */
-  padding: 10px; /* Padding for better spacing */
+  font-size: 1.2rem; 
+  text-align: center; 
+  padding: 10px; 
 }
 #carouselExample {
-  width: 100%; /* Ensures the carousel takes the full width of the grid column */
-  grid-row: 2; /* Places the carousel in the second row of the grid */
+  width: 100%; 
+  grid-row: 2; 
 }
 
 .carousel-item img {
-  width: 100%; /* Responsive image width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensures images cover the area without stretching */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; /* no stretching */
 }
 #carouselExample .carousel-inner {
-  border-radius: 10px; /* Rounded corners for the carousel */
-  overflow: hidden; /* Ensures the images fit within the corners */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Subtle shadow around the carousel */
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
 }
 
 .ytvideo-container-grid {
   background-color: black;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Creates as many columns as can fit, min 300px wide */
-  gap: 20px; /* Space between videos */
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); 
+  gap: 20px; 
   padding: 20px;
   justify-content: center;
   align-items: center;
@@ -234,12 +233,12 @@ tbody tr:hover {
 
 iframe {
   width: 100%;
-  height: auto; /* Adjust based on the aspect ratio */
+  height: auto; 
   aspect-ratio: 16 / 9; /* Modern CSS property to control video aspect ratio */
 }
 iframe {
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
   transition: transform 0.3s ease-in-out; /* Smooth transform effect */
 }
 
@@ -266,9 +265,9 @@ iframe:hover {
   text-align: center;
   margin: 20px 0;
   padding: 20px;
-  background-color: #f8f9fa; /* Light background to make it stand out */
+  background-color: #f8f9fa; 
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
 /* connect.html */
@@ -283,16 +282,16 @@ iframe:hover {
   display: grid;
   grid-template-rows: 1fr 2fr 1fr ;
   grid-template-columns: 1.5fr 2.5fr 1fr;
-  align-items: center; /* Centers items vertically */
-  justify-content: center; /* Centers items horizontally */
+  align-items: center; 
+  justify-content: center; 
   padding: 10px;
   gap: 40px;
 }
 
 .connect-intro {
-  grid-row: 2/3; /* Position it in the first row */
-  grid-column: 1 / 2; /* Span from the first to the last column */
-  text-align: center; /* Center the text inside the div */
+  grid-row: 2/3; 
+  grid-column: 1 / 2; 
+  text-align: center; 
   justify-content: center;
   background:rgba(241, 237, 237, 0);
   flex:1;
@@ -305,11 +304,10 @@ iframe:hover {
 }
 
 .subscribe-box {
-    grid-row: 2; /* Position it in the second row */
-    grid-column: 2/3; /* Position it in the second column */
-    padding: 20px; /* Add some padding */
-    background: rgba(240, 241, 255, 0.9); /* Optional: make background slightly transparent */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+    grid-row: 2; 
+    grid-column: 2/3; 
+    padding: 20px;
+    background: rgba(240, 241, 255, 0.9); 
 }
 
 .subscribe-box h1 {
@@ -470,11 +468,11 @@ iframe:hover {
 
   /* Common **/
   .footer-container {
-    text-align: center; /* Center text on small screens */
-    padding: 20px 10px; /* Adjust padding */
+    text-align: center; 
+    padding: 20px 10px; 
   }
   footer {
-    width: 100%; /* Full width on smaller screens */
+    width: 100%; 
   }
 
   /* Navigation */
@@ -499,8 +497,8 @@ iframe:hover {
   }
   .itemVideo {
     padding: 5px;
-    justify-content: flex-start; /* Align content to the left */
-    width: 100%; /* Take full width to spread out content */
+    justify-content: flex-start; 
+    width: 100%; 
   }
   #playbtn, #pausebtn {
     width: 20px;
@@ -520,12 +518,12 @@ iframe:hover {
     font-size: 2rem;
   }
   th, td {
-    padding: 8px; /* Smaller padding for smaller screens */
+    padding: 8px; 
   }
 
   .map-cell iframe {
-    width: 100%; /* Ensure maps resize correctly */
-    height: 80px; /* Smaller height on mobile */
+    width: 100%; 
+    height: 80px; 
   }
 
 
@@ -564,9 +562,9 @@ iframe:hover {
   gap: 10px;
 }
 .connect-intro {
-  grid-row: 1/2; /* Position it in the first row */
-  grid-column: span 2; /* Span from the first to the last column */
-  text-align: center; /* Center the text inside the div */
+  grid-row: 1/2; 
+  grid-column: span 2; 
+  text-align: center; 
 }
 
 #intro {
@@ -576,10 +574,10 @@ iframe:hover {
   padding-top: 20px ;
 }
 .subscribe-box {
-  grid-row: 2/3; /* Position it in the second row */
-  grid-column: span 2; /* Position it in the second column */
-  padding: 20px; /* Add some padding */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+  grid-row: 2/3; 
+  grid-column: span 2; 
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 
