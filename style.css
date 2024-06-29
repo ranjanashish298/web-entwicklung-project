@@ -487,10 +487,10 @@ iframe:hover {
   }
   .logo {
     font-size: 30px;
-   margin-right: 2rem;
+    margin-right: 2rem;
   }
 
- 
+
   /* Video and Audio */
   .video-container {
     flex-direction: column;
@@ -719,7 +719,7 @@ iframe:hover {
   border-radius: 8px;
 }
 
-.storeForm {
+.storeForm { /*main section*/
   display: flex;
 }
 
@@ -728,7 +728,7 @@ iframe:hover {
   margin-bottom: 10px;
 }
 
-#cart {
+#cart { /*shopping cart link*/
   font-size: 22px;
   margin-top: 10px;
   color: black;
@@ -736,14 +736,14 @@ iframe:hover {
   font-family: 'Montserrat', sans-serif;
 }
 
-.cost {
+.cost { /*cost of items*/
   color: rgb(75, 75, 75);
   margin-left: 18px;
   font-size: large;
   margin-top: 3px;
 }
 
-.size {
+.size { /*dropdown menu for items*/
   width: 20%;
   margin-left: 50px;
   font-size: 18px;
